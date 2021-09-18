@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mídias HTML5</title>
+</head>
+<body>
+    <h1>Imagem Dinâmica</h1>
+    <p>Você irá abrir essa pagina em aparelhos diferentes com tamanhos diferentes e cada aparelho vai abrir um imagem de tamanho diferente para adaptar o tamanho da tela</p>
+    <p>Use a tag picture pois ela permite adição de imagem e dentro a tag source que permite mudar a imagem de acordo com o tamanho da tela.</p>
+
+    <picture>
+        <source media="(min-width: 1060px" srcset="imagens/g.png" type="image/png"><!--Como se fosse o if se não atender o tamanho minimo de tela erá para proxima condição-->
+        <source media="(min-width: 750px)" srcset="imagens/m.png" type="image/png"><!--Esse é o elif tendo a sendo opção se não for pelomenos esse tamanho não irá mostra lembrando ta primeira oção então deve ficar entre as duas-->
+        <img src="imagens/p.png" alt="Fundo Pequeno"><!--Esse é o else caso nenhum das duas funcione irá colocar esse-->
+        <!--Lembrando que deve colocar da maior para a menor-->
+    </picture>
+
+    <h2>Colocando Audio</h2>
+
+    <p>Colocando audio no site use a tag audio e src para caminho controls para controlar as musicas e autoplay para tocar</p>
+
+    <audio preload="metadata" src="midia/American Idle - RKVC.mp3" controls autoplay></audio>
+
+    <p><strong>Segundo audio com opção de download caso não carregue</strong></p>
+
+    <audio preload="metadata" controls autoplay>
+        <source src="midia/Nine Lives - Unicorn Heads.mp3" type="audio/mp3">
+        <p>Seu navegador não suporta HMTL5 baixa o arquivo de audio abaixo</p>
+        <a href="midia/Nine Lives - Unicorn Heads.mp3" download="Nine Lives - Unicorn Heads.mp3">Clique Aqui</a>
+    </audio>
+    
+</body>
+</html>
